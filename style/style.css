@@ -1,0 +1,493 @@
+@import url(https://fonts.googleapis.com/css?family=Atomic+Age:regular);
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    min-width: 320px;
+}
+
+body{
+    line-height: 1;
+    font-family: Atomic Age;
+    color: white;
+}
+
+/* |---------------------------------------------------------| */
+
+.wrap{
+    /* overflow: hidden; */
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.site{
+    overflow-x: hidden;
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(104.4deg, rgba(143, 40, 114, 0.3) 1.58%, rgba(58, 70, 177, 0.3) 99.13%);
+    z-index: 5;
+}
+
+.bg{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* |---------------------------------------------------------| */
+
+.header {
+    position: relative;
+    width: 100%;
+    z-index: 50;
+    background: linear-gradient(90.35deg, rgba(0, 0, 0, 0.01) 16.51%, rgba(109, 76, 110, 0.3) 48.2%, rgba(0, 0, 0, 0.01) 83.93%);
+    backdrop-filter: blur(20px);
+}
+
+.page{
+    flex: 1 1 auto;
+}
+
+/* |---------------------------------------------------------| */
+
+.header__container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10%;
+    min-height: 75px;
+}
+
+.header-logo {
+    font-size: 30px;
+    line-height: 40px;
+    color: #15FFAB;
+}
+
+.header-list {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.header-item {
+    font-size: 16px;
+    line-height: 21px;
+    color: white;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.header-item:first-child{
+    color: #15FFAB;
+}
+
+.header-item:hover{
+    color: #15FFAB;
+}
+
+.search-input {
+    display: flex;
+    align-items: center;
+}
+
+.srchInput {
+    width: 300px;
+    height: 50px;
+    border: 1px solid #FFFFFF;
+    border-radius: 25px;
+    padding: 15px;
+    background: transparent;
+}
+
+.srchInput::placeholder {
+    font-size: 14px;
+    line-height: 19px;
+    color: #e3e3e3;
+    font-family: Atomic Age;
+}
+
+.imgSearch {
+    position: relative;
+    right: 35px;
+    width: 18px;
+    height: 18px;
+}
+
+.logBtn {
+    width: 125px;
+    height: 50px;
+    background: #15FFAB;
+    border-radius: 25.5px;
+    font-size: 16px;
+    line-height: 21px;
+    color: #000000;
+    font-family: Atomic Age;
+    transition: .5s;
+}
+
+.logBtn:hover{
+    transform: scale(1.04);
+}
+
+@media screen and (max-width: 1100px){ 
+    .srchInput {
+        width: 200px;
+        height: 40px;
+    }
+    .logBtn {
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 900px){ 
+    .search-input{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px){ 
+    .logBtn{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px){ 
+    .header-list{
+        gap: 15px;
+    }
+    .header-item{       
+        font-size: 13px;
+    }
+    .header-logo{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 700px){ 
+    .header__container{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/* |---------------------------------------------------------| */
+
+.page__container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+}
+
+.page-part{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-left_part{
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    height: 80%;
+    max-height: 400px;
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.title{
+    font-size: 75px;
+    line-height: 90px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+.short-desc{
+    font-size: 16px;
+    line-height: 25px;
+    color: #E3E3E3;
+}
+
+.desc{
+    font-size: 16px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+.btns-raw{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-play{
+    width: 125px;
+    height: 50px;
+    background: #15FFAB;
+    border-radius: 25px;
+    font-size: 16px;
+    line-height: 21px;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    transition: .5s;
+}
+
+.btn-share, .btn-save{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(275deg, #5A4D6B, #705F7E);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+.btn-play:hover, .btn-share:hover, .btn-save:hover{
+    transform: scale(1.06);
+}
+
+.page-right_part{
+    align-items: center;
+    justify-content: center;
+}
+
+.trailer{
+    width: 750px;
+    height: 350px;
+    transform: perspective(7000px) rotateY(-45deg);
+}
+.video{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/attackOnTitan.jpg);
+    background-size: cover;
+    filter: grayscale(60%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.play-circle{
+    width: 70px;
+    height: 70px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    transition: .5s;
+}
+
+.play-circle:hover{
+    transform: scale(1.15);
+}
+
+.play-txt{
+    color: #FFFFFF;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+@media screen and (max-width: 1200px){ 
+    .trailer{
+        width: 650px;
+        height: 300px;
+    }
+    .title{
+        font-size: 65px;
+    }
+    .short-desc{
+        font-size: 14px;
+    } 
+    .desc{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 1050px){ 
+    .trailer{
+        width: 600px;
+        height: 270px;
+    }
+    .title{
+        font-size: 55px;
+    }
+    .short-desc{
+        font-size: 13px;
+    } 
+    .desc{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 900px){ 
+    .trailer{
+        width: 500px;
+        height: 210px;
+    }
+    .title{
+        font-size: 45px;
+    }
+    .short-desc{
+        font-size: 12px;
+    } 
+    .desc{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 760px){ 
+    .trailer{
+        width: 450px;
+        height: 210px;
+        transform: perspective(0) rotateY(0);
+    }
+    .page__container{
+        flex-direction: column;
+    }
+    .page-part{
+        width: 100%;
+        min-height: 300px;
+        align-items: center;
+        justify-content: center;
+    }
+    .content{
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px){ 
+    .trailer{
+        width: 310px;
+        height: 180px;
+    }
+    .title{
+        font-size: 35px;
+    }
+    .short-desc{
+        font-size: 10px;
+    } 
+    .desc{
+        font-size: 10px;
+    }
+    .content{
+        gap: 0px;
+    }
+}
+
+/* |---------------------------------------------------------| */
+
+.footer{
+    min-height: 280px;
+    height: 30%;
+}
+
+.footer__container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+  }
+
+.swiper-slide {
+    background: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 220px !important;
+    border-radius: 10px !important;
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    filter: grayscale(50%);
+}
+
+.slide1 {
+    background-image: url(../img/attackOnTitan.jpg);    
+}
+
+.slide2 {
+    background-image: url(../img/machineWar.png);
+}
+
+.slide3 {
+    background-image: url(../img/theLifeBattle.png);
+}
+
+.slide4 {
+    background-image: url(../img/roboticCivilWar.png);
+}
+
+.slide5 {
+    background-image: url(../img/theWarriorLife.png);
+}
+
+.slide6 {
+    background-image: url(../img/survivalOnDeath.jpg);
+}
+
+.filmname{
+    font-size: 17px;
+    line-height: 27px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.filmInfo{
+    font-size: 13px;
+    line-height: 19px;
+    color: #E3E3E3;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px){ 
+    .swiper-slide{
+        align-items: center;
+    }
+}
